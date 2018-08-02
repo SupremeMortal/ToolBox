@@ -1,0 +1,9 @@
+name: ToolBox
+main: xyz.baddev.toolbox.ToolBox
+version: "1.0.0"
+author: Baddev
+website: https://baddeveloper.xyz/
+
+api: ["1.0.5"]
+load: POSTWORLD
+prefix: "ToolBox"
