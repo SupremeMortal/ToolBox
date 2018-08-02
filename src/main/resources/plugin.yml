@@ -21,3 +21,6 @@ permissions:
   toolbox.command.gmsp:
     description: "Allows the user to change their game mode to Spectator"
     default: false
+  toolbox.command.pos:
+    description: "Allows the user to gather information about their position"
+    default: true

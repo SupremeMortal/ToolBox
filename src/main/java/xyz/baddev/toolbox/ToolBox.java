@@ -39,6 +39,8 @@ public class ToolBox extends PluginBase {
         commandMap.register("gms", new GMSCommand());
         commandMap.register("gma", new GMACommand());
         commandMap.register("gmsp", new GMSPCommand());
+
+        commandMap.register("pos", new PosCommand());
     }
 
     @Override
