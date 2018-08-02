@@ -14,8 +14,8 @@ public class FileManager implements Manager {
     public void onEnable(ToolBox instance) {
         baseDir = instance.getDataFolder();
 
-        motdFile = new File(baseDir, "motd.txt");
         instance.saveResource("motd.txt");
+        motdFile = new File(baseDir, "motd.txt");
     }
 
     public void onDisable(ToolBox instance) {}
