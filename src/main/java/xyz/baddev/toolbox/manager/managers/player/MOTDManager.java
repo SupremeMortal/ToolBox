@@ -14,11 +14,13 @@ public class MOTDManager implements Manager {
 
     private ToolBox instance;
     private String motd;
+    private boolean enabled;
 
     public void onEnable(ToolBox instance) {
         this.instance = instance;
         try {
-            this.motd = Utils.readFile(motd);
+            this.motd = Utils.readFile(instance.getFileManager().getMotdFile());
+            enabled = instance.getConfig().getBoolean("messages.enable-motd");
             instance.register(this);
         } catch (IOException e) {
             instance.getLogger().error(String.format("Failed reading motd file (%s).", e.getMessage()));
@@ -30,6 +32,6 @@ public class MOTDManager implements Manager {
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         final Player player = event.getPlayer();
-        player.sendMessage(TextUtils.colorizeText(motd));
+        if(enabled) player.sendMessage(TextUtils.placeholderify(TextUtils.colorizeText(motd), player));
     }
 }
