@@ -1,0 +1,24 @@
+# +============================================+ #
+# I             ToolBox by Baddev              I #
+# +============================================+ #
+
+# Toolbox, a plugin developed by Baddev for NukkitX.
+# To correctly use this plugin make sure to download the following plugins:
+#   --> PlaceholderAPI  (Optional)    [Requires KotlinLib]                  https://nukkitx.com/resources/placeholderapi.104/
+#   --> KotlinLib       (Optional)    [Only if PlaceholderAPI is enabled]   https://nukkitx.com/resources/kotlinlib.48/
+
+
+# +============================================+ #
+# I                Basic Config                I #
+# +============================================+ #
+
+messages:
+  # You can change the MOTD in the file "motd.txt"
+  enable-motd: true
+
+  # To disable custom join / leave messages, set the property to ''
+
+  # Use the placeholder '%player%' to get the player's name
+  join-message: '&a%player% has joined the server!'
+  # Use the placeholder '%player%' to get the player's name
+  leave-message: '&c%player% has left the server!'

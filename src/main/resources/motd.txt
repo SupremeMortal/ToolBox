@@ -1,3 +1,4 @@
-&6Welcome to my &cNukkitX Server&6!
+&6Welcome &c%player% &6to my &cNukkitX Server&6!
+&6There are &c%server_online%&6/&c%server_max_players% &6players online.
 &6Please follow the rules &cat all times&6!
 &6Thanks and &chave fun&6!
