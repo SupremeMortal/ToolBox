@@ -18,6 +18,8 @@ public class PlaceholderManager implements Manager {
         if (available) {
             placeholderAPI = PlaceholderAPIIml.getInstance();
             instance.getLogger().info("Enabled PlaceholderAPI support.");
+        } else {
+            instance.getLogger().warning("Disabled PlaceholderAPI support. Install PlaceholderAPI (see config.yml) to fix all placeholders.");
         }
     }
 
