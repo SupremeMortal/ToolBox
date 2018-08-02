@@ -7,3 +7,17 @@ website: https://baddeveloper.xyz/
 api: ["1.0.5"]
 load: POSTWORLD
 prefix: "ToolBox"
+
+permissions:
+  toolbox.command.gmc:
+    description: "Allows the user to change their game mode to Creative"
+    default: false
+  toolbox.command.gms:
+    description: "Allows the user to change their game mode to Survival"
+    default: false
+  toolbox.command.gma:
+    description: "Allows the user to change their game mode to Adventure"
+    default: false
+  toolbox.command.gmsp:
+    description: "Allows the user to change their game mode to Spectator"
+    default: false

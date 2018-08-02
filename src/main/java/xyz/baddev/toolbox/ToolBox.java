@@ -1,7 +1,12 @@
 package xyz.baddev.toolbox;
 
+import cn.nukkit.command.SimpleCommandMap;
 import cn.nukkit.event.Listener;
 import cn.nukkit.plugin.PluginBase;
+import xyz.baddev.toolbox.command.commands.player.GMACommand;
+import xyz.baddev.toolbox.command.commands.player.GMCCommand;
+import xyz.baddev.toolbox.command.commands.player.GMSCommand;
+import xyz.baddev.toolbox.command.commands.player.GMSPCommand;
 import xyz.baddev.toolbox.manager.managers.player.MOTDManager;
 import xyz.baddev.toolbox.manager.managers.player.MessagesManager;
 import xyz.baddev.toolbox.manager.managers.utils.FileManager;
@@ -30,6 +35,13 @@ public class ToolBox extends PluginBase {
         placeholderManager.onEnable(this);
         messagesManager.onEnable(this);
         motdManager.onEnable(this);
+
+        final SimpleCommandMap commandMap = getServer().getCommandMap();
+
+        commandMap.register("gmc", new GMCCommand());
+        commandMap.register("gms", new GMSCommand());
+        commandMap.register("gma", new GMACommand());
+        commandMap.register("gmsp", new GMSPCommand());
     }
 
     @Override
